@@ -1,22 +1,24 @@
 require("@nomicfoundation/hardhat-toolbox");
 
+require('dotenv').config();
+
 // 测试网部署NerveMultiSigWalletIII: 0x4F50AB8Ae16d0643C9dad2cc9debbb0E9F714507
-// const PRIVATE_KEY = "3b1a5e193825fe0c4551998ed4aa6d490b617bad0709f11a149b4c8829e6b24a";
+// const PRIVATE_KEY = process.env.acc4507;
 
 // 测试网部署CreateERC20Minter: 0x2804A4296211Ab079AED4e12120808F1703841b3
-const PRIVATE_KEY = "c48f55dbe619e83502be1f72c875ed616aeaab6108196f0d644d72e992f6a155";
+// const PRIVATE_KEY = process.env.acc41b3;
 
 // 新开发环境: 0x7a9a9223830e58a53f47972255a99edba0332617
-// const PRIVATE_KEY = "2f9df30325528074753f3be473dec781f28038691ec94b72900a1eec8db82cc9";
+const PRIVATE_KEY = process.env.acc2617;
 
 // 旧开发环境: 0xf173805F1e3fE6239223B17F0807596Edc283012
-// const PRIVATE_KEY = "d15fdd6030ab81cee6b519645f0c8b758d112cd322960ee910f65ad7dbb03c2b";
+// const PRIVATE_KEY = process.env.acc3012;
 
 // mode blast merlin
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  defaultNetwork: "merlin",
+  defaultNetwork: "enuls",
   networks: {
     hardhat: {
     },
@@ -69,6 +71,16 @@ module.exports = {
       url: "https://testnet-rpc.merlinchain.io",
       accounts: [PRIVATE_KEY],
       chainId: 686868
+    },
+    pulse: {
+      url: "https://rpc.v4.testnet.pulsechain.com",
+      accounts: [PRIVATE_KEY],
+      chainId: 943
+    },
+    mint: {
+      url: "https://sepolia-testnet-rpc.mintchain.io",
+      accounts: [PRIVATE_KEY],
+      chainId: 1687
     }
   },
   solidity: {
@@ -78,8 +90,9 @@ module.exports = {
     //   {version: "0.4.26"}
     // ],
     // version: "0.4.26",
-    version: "0.6.12",
+    // version: "0.6.12",
     // version: "0.5.17",
+    version: "0.8.0",
     settings: {
       optimizer: {
         enabled: true,

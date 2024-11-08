@@ -5,7 +5,7 @@ async function main() {
     let price = await hre.ethers.provider.getGasPrice();
     // wallet地址
     const multiSigWalletAddress = "0x50074F4Bc4bC955622b49de16Fc6E3C1c73afBcA";
-    const nvtERC20 = "0xE6b360C49A316fcc71d55B3074160ee043a7BD8B";
+    const nvtERC20 = "0x67Ce1821eFa30478e459ABFC5966d4Bc82Dbc17f";
 
     const walletAbi = require("../artifacts/contracts/NerveMultiSigWalletIII.sol/NerveMultiSigWalletIII.json");
     const wallet = new hre.ethers.Contract(multiSigWalletAddress, walletAbi.abi, deployer);

@@ -7,3 +7,4 @@ lib/
 *.log
 /artifacts
 /cache
+/contracts

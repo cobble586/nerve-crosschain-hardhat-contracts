@@ -1,4 +1,4 @@
-## SBC-Contract Deploy
+## Nerve-Contract Deploy
 
 ### project init
 
@@ -31,3 +31,7 @@ npx hardhat run scripts/registerMinterERC20.js
 ### deploy CreateERC20Minter
 
 npx hardhat run scripts/deployCreateERC20Minter.js
+
+### deploy Multicall2
+
+npx hardhat run scripts/deployMulticall2.js
